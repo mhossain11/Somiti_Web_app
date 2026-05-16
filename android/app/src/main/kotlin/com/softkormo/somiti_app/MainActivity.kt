@@ -1,4 +1,4 @@
-package com.softkormo.sobiti_app
+package com.softkormo.somiti_app
 
 import io.flutter.embedding.android.FlutterActivity
 
