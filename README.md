@@ -1,4 +1,4 @@
-# sobiti_app
+# somiti_app
 
 Short description about the project..
 
