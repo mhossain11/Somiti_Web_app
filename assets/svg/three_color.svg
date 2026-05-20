@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="80" viewBox="0 0 240 80" role="img" aria-label="Three circles: red, yellow, green">
+  <!-- Red -->
+  <circle cx="40"  cy="40" r="30" fill="#E53935" />
+  <!-- Yellow -->
+  <circle cx="120" cy="40" r="30" fill="#FFEB3B" />
+  <!-- Green -->
+  <circle cx="200" cy="40" r="30" fill="#43A047" />
+</svg>

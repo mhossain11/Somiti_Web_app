@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:somiti_app/features/home/presentation/screen/home_screen.dart';
 import '../../../../responsive.dart';
 import '../widgets/login_widget.dart';
 
@@ -49,7 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         passwordController: passwordController,
                         onTap: () {  },
                         onTapRegister: () {  },
-                        onPressed: () {  },
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                        },
                                             ),
                       ),),
                   ],
@@ -62,7 +65,9 @@ class _LoginScreenState extends State<LoginScreen> {
           passwordController: passwordController,
           onTap: () {  },
           onTapRegister: () {  },
-          onPressed: () {  },
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+          },
         ),
       ),
     );
