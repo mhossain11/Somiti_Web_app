@@ -3,7 +3,7 @@ import 'package:somiti_app/features/home/presentation/widgets/customappbar.dart'
 import 'package:somiti_app/responsive.dart';
 
 import '../../../home/presentation/widgets/appskidedrawer.dart';
-import '../../../home/presentation/widgets/home_content.dart';
+import '../../../home/presentation/screen/home_content.dart';
 
 
 

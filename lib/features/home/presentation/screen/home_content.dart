@@ -4,8 +4,8 @@ import 'package:somiti_app/features/home/presentation/widgets/savings_overview_s
 import 'package:somiti_app/features/home/presentation/widgets/summary_grid_items.dart';
 
 import '../../../../responsive.dart';
-import 'balance_card.dart';
-import 'customappbar.dart';
+import '../widgets/balance_card.dart';
+import '../widgets/customappbar.dart';
 
 class HomeContent extends StatelessWidget {
   final GlobalKey<ScaffoldState> drawerKey;
