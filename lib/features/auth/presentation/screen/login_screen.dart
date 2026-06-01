@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:somiti_app/features/dashboard/presentation/screen/dashboard.dart';
 import 'package:somiti_app/features/home/presentation/screen/home_screen.dart';
 import '../../../../responsive.dart';
 import '../widgets/login_widget.dart';
@@ -51,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         onTap: () {  },
                         onTapRegister: () {  },
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context)=>HomeScreen()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=>Dashboard()));
                         },
                                             ),
                       ),),

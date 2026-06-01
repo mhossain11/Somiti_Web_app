@@ -2,12 +2,16 @@ import 'package:flutter/material.dart';
 
 class AppSideDrawer extends StatelessWidget {
   final bool isExpanded;
+  final int selectedIndex;
+  final Function(int) onItemSelected;
   final VoidCallback onToggle;
 
   const AppSideDrawer({
     super.key,
     required this.isExpanded,
     required this.onToggle,
+    required this.selectedIndex,
+    required this.onItemSelected,
   });
 
   @override
@@ -66,12 +70,33 @@ class AppSideDrawer extends StatelessWidget {
           _drawerItem(
             icon: Icons.dashboard_outlined,
             title: "Dashboard",
-            active: true,
+              active: selectedIndex == 0,
+            onTap: () => onItemSelected(0),
           ),
-          _drawerItem(icon: Icons.person_outline, title: "Profile"),
-          _drawerItem(icon: Icons.receipt_long_outlined, title: "Expense History"),
-          _drawerItem(icon: Icons.swap_horiz, title: "Transactions"),
-          _drawerItem(icon: Icons.notifications_none, title: "Notifications"),
+          _drawerItem(
+              icon: Icons.person_outline,
+              title: "Profile",
+              active: selectedIndex == 1,
+              onTap:() => onItemSelected(1),
+          ),
+          _drawerItem(
+              icon: Icons.receipt_long_outlined,
+              title: "Expense History",
+              active: selectedIndex == 2,
+              onTap:   () => onItemSelected(2),
+          ),
+          _drawerItem(
+              icon: Icons.swap_horiz,
+              title: "Transactions",
+              active: selectedIndex == 3,
+              onTap: () => onItemSelected(3),
+          ),
+          _drawerItem(
+              icon: Icons.notifications_none,
+              title: "Notifications",
+              active: selectedIndex == 4,
+              onTap: () => onItemSelected(4),
+            ),
 
           const Spacer(),
 
@@ -178,40 +203,44 @@ class AppSideDrawer extends StatelessWidget {
     required IconData icon,
     required String title,
     bool active = false,
+    VoidCallback? onTap,
   }) {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: isExpanded ? 13 : 0,
         vertical: 4,
       ),
-      child: Container(
-        height: 42,
-        decoration: BoxDecoration(
-          color: active ? const Color(0xff2563EB) : Colors.transparent,
-          borderRadius: BorderRadius.circular(8),
-        ),
-        child: Row(
-          mainAxisAlignment:
-          isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
-          children: [
-            if (isExpanded) const SizedBox(width: 12),
-            Icon(
-              icon,
-              color: active ? Colors.white : const Color(0xff9FB0C8),
-              size: 20,
-            ),
-            if (isExpanded) ...[
-              const SizedBox(width: 12),
-              Text(
-                title,
-                style: TextStyle(
-                  color: active ? Colors.white : const Color(0xff9FB0C8),
-                  fontWeight: active ? FontWeight.w700 : FontWeight.w500,
-                  fontSize: 14,
-                ),
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          height: 42,
+          decoration: BoxDecoration(
+            color: active ? const Color(0xff2563EB) : Colors.transparent,
+            borderRadius: BorderRadius.circular(8),
+          ),
+          child: Row(
+            mainAxisAlignment:
+            isExpanded ? MainAxisAlignment.start : MainAxisAlignment.center,
+            children: [
+              if (isExpanded) const SizedBox(width: 12),
+              Icon(
+                icon,
+                color: active ? Colors.white : const Color(0xff9FB0C8),
+                size: 20,
               ),
+              if (isExpanded) ...[
+                const SizedBox(width: 12),
+                Text(
+                  title,
+                  style: TextStyle(
+                    color: active ? Colors.white : const Color(0xff9FB0C8),
+                    fontWeight: active ? FontWeight.w700 : FontWeight.w500,
+                    fontSize: 14,
+                  ),
+                ),
+              ],
             ],
-          ],
+          ),
         ),
       ),
     );
