@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:somiti_app/features/home/presentation/widgets/customappbar.dart';
+import 'package:somiti_app/features/profile/presentation/screen/profile.dart';
 import 'package:somiti_app/responsive.dart';
 
 import '../../../home/presentation/widgets/appskidedrawer.dart';
@@ -34,7 +35,7 @@ class _DashboardState extends State<Dashboard> {
             }
         },);
       case 1:
-        return const Center(child: Text("Profile Page"));
+        return Profile();
       case 2:
         return const Center(child: Text("Expense History Page"));
       case 3:
