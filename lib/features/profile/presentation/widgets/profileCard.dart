@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 
+import '../../../../responsive.dart';
+
 class ProfileCard extends StatelessWidget {
   const ProfileCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 335,
-      height: 430,
+      width: Responsive.isLargeScreen(context) ? 335:Responsive.width(context) * 0.9,
+      height: Responsive.isLargeScreen(context)? Responsive.width(context) * 0.6: 430,
       decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(14),

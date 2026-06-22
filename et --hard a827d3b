@@ -1,0 +1,11 @@
+[33mbac4813[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD~1
+[33m7c5ae90[m HEAD@{1}: reset: moving to HEAD~1
+[33ma827d3b[m HEAD@{2}: commit: profileCard added
+[33m7c5ae90[m HEAD@{3}: commit: profileCard added
+[33mbac4813[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{4}: commit: dashboard screen added
+[33mce4e7aa[m HEAD@{5}: commit: add drawer and expended screen
+[33ma3408ea[m HEAD@{6}: commit: add Homescreen some feature
+[33m6e535a4[m HEAD@{7}: commit: Readme change app name
+[33mc820182[m HEAD@{8}: commit: create login screen & responsive
+[33ma0fe6d3[m HEAD@{9}: Branch: renamed refs/heads/master to refs/heads/main
+[33ma0fe6d3[m HEAD@{11}: commit (initial): add all file
